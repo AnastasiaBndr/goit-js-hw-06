@@ -15,9 +15,7 @@ const images = [
 
 const doc = document.querySelector(".gallery");
 
-let newArr=[...images];
-console.log(newArr);
-const changed = newArr.map(element =>`<li class="img-element" ><img class="image" src="${element.url}" alt="${element.alt}"/></li>`).join("\n");
+const changed = images.map(element => `<li class="img-element" ><img class="image" src="${element.url}" alt="${element.alt}"/></li>`).join("\n");
 
 doc.insertAdjacentHTML("beforeend", changed);
 

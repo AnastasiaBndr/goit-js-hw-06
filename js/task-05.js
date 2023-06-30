@@ -5,9 +5,11 @@ nameInput.addEventListener('input', onInput)
 
 function onInput(){
     
-    const value = nameInput.value;
-    if(value!=""){
+    const value = nameInput.value+"";
+
+    const trimmed = value.trim();
+    if(trimmed!=""){
     nameOutput.textContent="";
-    nameOutput.textContent+=value;
+    nameOutput.textContent+=trimmed;
     }else nameOutput.textContent="Anonymos";
 }

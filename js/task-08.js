@@ -9,7 +9,8 @@ function onSubmit(evt){
     if(email.value=="" || password.value==""){
         alert("ЗАПОВНИ ВСІ ПОЛЯ");
     }else {
-        console.log(`Email: ${email.value} Password: ${password.value}`);
+        const userInfo={userEmail: email.value, userPassword:password.value};
+        console.log(`Email: ${userInfo.userEmail} Password: ${userInfo.userPassword}`);
         ourForm.reset();
     }
 
