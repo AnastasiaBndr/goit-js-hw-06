@@ -1,11 +1,11 @@
 const rangeInput = document.getElementById("font-size-control");
 const text = document.getElementById("text");
 
-text.style.fontSize=`${rangeInput.value}px`;
+onRange();
 
 rangeInput.addEventListener("input", onRange);
 
-function onRange(evt){
+function onRange(){
    
     text.style.fontSize=`${rangeInput.value}px`;
 }

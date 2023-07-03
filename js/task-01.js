@@ -6,6 +6,6 @@ console.log(`Number of categories: ${aa.length}`)
 
 arr.forEach(element => {
     console.dir(`Category: ${element.firstElementChild.textContent}`);
-    console.dir(`Length: ${element.children[1].children.length}`);
+    console.dir(`Length: ${element.lastElementChild.children.length}`);
     
 });

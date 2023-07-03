@@ -12,6 +12,7 @@ const boxes = document.getElementById("boxes");
 const range = document.querySelector('input[type="number"]');
 const min = Number(range.min);
 const max = Number(range.max);
+const inputStep = Number(range.step);
 const step =10;
 
 create.addEventListener("click", onClick);
@@ -26,14 +27,14 @@ function onClick(){
 
 function createBoxes(amount){
     let temp = 30;
-    for (let i = 0; i < amount; i++) {
+    for (let i = 0; i < amount; i+=inputStep) {
       let markup = document.createElement("div");
       markup.className="div-task-10";
         markup.style.width=`${markup.style.width+temp}px`;
       markup.style.height=`${markup.style.height+temp}px`;
       markup.style.backgroundColor=`${getRandomHexColor()}`;
       markup.style.margin="1px"; 
-       boxes.append(markup);
+       boxes.innerHTML+=markup.outerHTML;
        temp+=step;
     }
 

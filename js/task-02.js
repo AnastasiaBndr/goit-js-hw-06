@@ -20,4 +20,5 @@ const newArr=ingredients.map(element => {
 
 });
 
-startedFile.innerHTML+=newArr.join("\n");
+startedFile.innerHTML+=[...newArr].join("");
+

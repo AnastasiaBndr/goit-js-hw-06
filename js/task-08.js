@@ -10,7 +10,7 @@ function onSubmit(evt){
         alert("ЗАПОВНИ ВСІ ПОЛЯ");
     }else {
         const userInfo={userEmail: email.value, userPassword:password.value};
-        console.log(`Email: ${userInfo.userEmail} Password: ${userInfo.userPassword}`);
+        console.log(userInfo);
         ourForm.reset();
     }
 

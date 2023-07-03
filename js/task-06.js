@@ -8,9 +8,9 @@ function onClick(evt){
      input.classList.remove("invalid");
      input.classList.remove("valid");
 
-     const trimmed = (input.value+"").trim().replace(' ', '');
+     const trimmed = input.value.trim().length;
 
-    if(trimmed.length!=input.dataset.length)
+    if(trimmed!=input.dataset.length)
         input.classList.add("invalid");
     else input.classList.add("valid");
 
